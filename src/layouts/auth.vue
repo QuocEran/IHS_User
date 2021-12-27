@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-primary">
+  <div class="">
     <heading-auth />
     <slot />
   </div>

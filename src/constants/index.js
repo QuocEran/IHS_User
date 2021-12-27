@@ -9,16 +9,16 @@ export const NAV_ITEMS = [
   {
     icon: "calendar",
     text: "Lịch hẹn",
-    name: "Home",
+    name: "Appointments",
   },
   {
     icon: "file-medical",
     text: "Thiết bị",
-    name: "Home",
+    name: "Device",
   },
   {
     icon: "user",
     text: "Cá nhân",
-    name: "Home",
+    name: "Profile",
   },
 ];

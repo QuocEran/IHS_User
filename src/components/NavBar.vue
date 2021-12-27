@@ -1,7 +1,7 @@
 <template>
   <footer
     id="footer"
-    class="fixed w-full max-w-lg bottom-0 bg-primary items-center py-4"
+    class="fixed w-full max-w-lg bottom-0 bg-secondary items-center py-4"
   >
     <div class="container mx-auto px-6 h-full">
       <ul class="flex justify-between h-full items-center">
@@ -11,8 +11,10 @@
           class="hover:text-black rounded-xl p-2"
         >
           <router-link
+            @click="changeState(navItem.name)"
             :to="{ name: navItem.name, params: {} }"
-            class="text-gray-500 text-xl hover:text-gray-900 flex flex-col items-center"
+            :class="[navItem.name == navState ? 'text-black' : 'text-gray-400']"
+            class="text-xl hover:text-black flex flex-col items-center"
           >
             <fa :icon="navItem.icon" />
             <p class="font-bold text-sm">{{ navItem.text }}</p>
@@ -32,16 +34,25 @@
 </template>
 
 <script>
-import { reactive } from "vue";
-// import { useRouter } from "vue-router";
+import { reactive, computed } from "vue";
+
+import { useStore } from "vuex";
 
 import { NAV_ITEMS } from "@/constants/index";
 
 export default {
+  name: "NavBar",
   setup() {
-    // const router = useRouter();
+    const store = useStore();
     const navItems = reactive(NAV_ITEMS);
-    return { navItems };
+    function changeState(nameState) {
+      store.dispatch("changeNavState", { stateName: nameState });
+    }
+    return {
+      changeState,
+      navItems,
+      navState: computed(() => store.state.NavState),
+    };
   },
 };
 </script>
@@ -54,7 +65,7 @@ footer#footer > div[data-circle] > div {
   position: absolute;
 }
 footer#footer > div[data-circle] {
-  background-color: #aedef8;
+  background-color: #ffe3e3;
   content: "";
   width: 60px;
   height: 30px;

@@ -23,8 +23,8 @@ const routes = [
     beforeEnter: requireAuth,
   },
   {
-    path: "/about",
-    name: "About",
+    path: "/appointments",
+    name: "Appointments",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -32,9 +32,38 @@ const routes = [
       layout: "default",
     },
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+      import(
+        /* webpackChunkName: "appointments" */ "../views/Appointments.vue"
+      ),
     beforeEnter: requireAuth,
   },
+  {
+    path: "/device",
+    name: "Device",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    meta: {
+      layout: "default",
+    },
+    component: () =>
+      import(/* webpackChunkName: "device" */ "../views/Device.vue"),
+    beforeEnter: requireAuth,
+  },
+  {
+    path: "/profile",
+    name: "Profile",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    meta: {
+      layout: "default",
+    },
+    component: () =>
+      import(/* webpackChunkName: "profile" */ "../views/Profile.vue"),
+    beforeEnter: requireAuth,
+  },
+
   {
     path: "/login",
     name: "Login",

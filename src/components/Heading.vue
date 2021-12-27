@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full h-24 bg-primary items-center">
+  <div class="flex w-full h-24 bg-secondary items-center">
     <img
       src="../assets/images/ava.jpg"
       alt=""
@@ -12,7 +12,7 @@
     <span class="w-14 h-full flex justify-center items-center font-bold">
       <router-link
         to="/logout"
-        class="text-gray-500 cursor-pointer hover:text-gray-900"
+        class="text-gray-500 cursor-pointer hover:text-black"
       >
         <fa icon="power-off" />
       </router-link>

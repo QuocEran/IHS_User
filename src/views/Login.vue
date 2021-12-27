@@ -54,7 +54,7 @@
       </div>
       <!-- Direction-->
 
-      <div class="w-full text-center mt-6 inline-block">
+      <div class="w-full text-center my-6 inline-block">
         <span class="font-medium">I'm a new user.</span>
         <span class="ml-1">
           <router-link :to="{ name: 'Register', params: {} }" class="font-bold"
