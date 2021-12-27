@@ -18,6 +18,9 @@ const routes = [
     name: "Home",
     meta: {
       layout: "default",
+      isHome: true,
+      isShowHeader: true,
+      isShowFooter: true,
     },
     component: () => import(/* webpackChunkName: "home" */ "../views/Home.vue"),
     beforeEnter: requireAuth,
@@ -30,6 +33,10 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     meta: {
       layout: "default",
+      isShowHeader: true,
+      isShowFooter: true,
+      name: "Lịch hẹn",
+      icon: "calendar",
     },
     component: () =>
       import(
@@ -45,6 +52,10 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     meta: {
       layout: "default",
+      isShowHeader: true,
+      isShowFooter: true,
+      name: "Thiết bị",
+      icon: "file-medical",
     },
     component: () =>
       import(/* webpackChunkName: "device" */ "../views/Device.vue"),
@@ -58,12 +69,14 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     meta: {
       layout: "default",
+      isShowHeader: false,
+      isShowFooter: true,
     },
     component: () =>
       import(/* webpackChunkName: "profile" */ "../views/Profile.vue"),
     beforeEnter: requireAuth,
   },
-
+  // auth layer
   {
     path: "/login",
     name: "Login",
@@ -96,6 +109,25 @@ const routes = [
     },
     component: () =>
       import(/* webpackChunkName: "register" */ "../views/Register.vue"),
+  },
+  //sub layer
+  {
+    path: "/:pathMatch(.*)*",
+    name: "not-found",
+    meta: {
+      layout: "sub",
+    },
+    component: () =>
+      import(/* webpackChunkName: "not-found" */ "../views/404.vue"),
+  },
+  {
+    path: "/stats",
+    name: "stats",
+    meta: {
+      layout: "sub",
+    },
+    component: () =>
+      import(/* webpackChunkName: "stats" */ "../views/Stats.vue"),
   },
 ];
 

@@ -7,6 +7,7 @@ import store from "./store";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faFontAwesome } from "@fortawesome/free-brands-svg-icons";
 
 // Tailwind
 import "./assets/styles/tailwind.css";
@@ -20,6 +21,7 @@ import { projectAuth } from "@/configs/firebase";
 
 // Config App
 library.add(fas);
+library.add(faFontAwesome);
 
 let app;
 projectAuth.onAuthStateChanged(() => {

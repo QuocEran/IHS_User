@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8 w-full mx-auto grid-cols-3 grid gap-4">
+  <div class="mt-4 w-full mx-auto grid-cols-3 grid gap-4">
     <home-components />
     <home-components />
     <home-components />

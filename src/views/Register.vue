@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8 max-w-md mx-auto">
+  <div class="mt-8">
     <div class="container mx-auto px-8">
       <form
         class="flex flex-col justify-start space-y-6"

@@ -10,4 +10,9 @@ export function registerGlobalComponent(app) {
     "default-layout",
     defineAsyncComponent(() => import("@/layouts/default"))
   );
+
+  app.component(
+    "sub-layout",
+    defineAsyncComponent(() => import("@/layouts/sub"))
+  );
 }

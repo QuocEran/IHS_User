@@ -1,7 +1,7 @@
 <template>
   <footer
     id="footer"
-    class="fixed w-full max-w-lg bottom-0 bg-secondary items-center py-4"
+    class="fixed w-full max-w-lg bottom-0 bg-secondary items-center py-2"
   >
     <div class="container mx-auto px-6 h-full">
       <ul class="flex justify-between h-full items-center">
@@ -27,7 +27,7 @@
       <div
         class="flex items-center justify-center bg-blue-500 text-primary cursor-pointer rounded-full w-12 h-12 -top-6"
       >
-        <fa icon="plus-circle" />
+        <fa icon="heartbeat" class="text-xl" />
       </div>
     </div>
   </footer>
@@ -38,17 +38,31 @@ import { reactive, computed } from "vue";
 
 import { useStore } from "vuex";
 
+import { useRouter } from "vue-router";
+
 import { NAV_ITEMS } from "@/constants/index";
 
 export default {
   name: "NavBar",
   setup() {
+    // use store
     const store = useStore();
     const navItems = reactive(NAV_ITEMS);
     function changeState(nameState) {
       store.dispatch("changeNavState", { stateName: nameState });
     }
+
+    // use router
+    const router = useRouter();
+
+    function gotoRoute() {
+      router.push({
+        name: "stats",
+        params: {},
+      });
+    }
     return {
+      gotoRoute,
       changeState,
       navItems,
       navState: computed(() => store.state.NavState),

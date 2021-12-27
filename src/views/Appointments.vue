@@ -1,12 +1,13 @@
 <template>
-  <div class="appointments">
-    <h1>This is an appointments page</h1>
+  <div class="appointments mt-4">
+    <appointments-components :data="null" />
   </div>
 </template>
 
 <script>
 import { useStore } from "vuex";
 import { useRoute } from "vue-router";
+import AppointmentsComponents from "@/components/AppointmentsComponents.vue";
 export default {
   setup() {
     const route = useRoute();
@@ -15,5 +16,6 @@ export default {
 
     store.dispatch("changeNavState", { stateName: route.name });
   },
+  components: { AppointmentsComponents },
 };
 </script>

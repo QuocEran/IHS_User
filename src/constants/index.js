@@ -22,3 +22,46 @@ export const NAV_ITEMS = [
     name: "Profile",
   },
 ];
+
+export const PROFILE_OPTIONS = [
+  {
+    name: "Chỉnh sửa thông tin",
+    icon: "user-edit",
+    route: {
+      name: "Home",
+      params: {},
+    },
+  },
+  {
+    name: "Công cụ",
+    icon: "tools",
+    route: {
+      name: "Home",
+      params: {},
+    },
+  },
+  {
+    name: "Quyền lợi",
+    icon: "lock",
+    route: {
+      name: "Home",
+      params: {},
+    },
+  },
+  {
+    name: "Về chúng tối",
+    icon: "info-circle",
+    route: {
+      name: "Home",
+      params: {},
+    },
+  },
+  {
+    name: "Đăng xuất",
+    icon: "power-off",
+    route: {
+      name: "Logout",
+      params: {},
+    },
+  },
+];
