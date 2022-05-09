@@ -35,12 +35,12 @@ const routes = [
       layout: "default",
       isShowHeader: true,
       isShowFooter: true,
-      name: "Lịch hẹn",
-      icon: "calendar",
+      name: "Bệnh án",
+      icon: "file-medical",
     },
     component: () =>
       import(
-        /* webpackChunkName: "appointments" */ "../views/Appointments.vue"
+        /* webpackChunkName: "medical-record" */ "../views/MedicalRecord.vue"
       ),
     beforeEnter: requireAuth,
   },
@@ -55,7 +55,7 @@ const routes = [
       isShowHeader: true,
       isShowFooter: true,
       name: "Thiết bị",
-      icon: "file-medical",
+      icon: "satellite-dish",
     },
     component: () =>
       import(/* webpackChunkName: "device" */ "../views/Device.vue"),
@@ -74,6 +74,23 @@ const routes = [
     },
     component: () =>
       import(/* webpackChunkName: "profile" */ "../views/Profile.vue"),
+    beforeEnter: requireAuth,
+  },
+  {
+    path: "/edit-profile",
+    name: "EditProfile",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    meta: {
+      layout: "default",
+      name: "Chỉnh sửa thông tin",
+      icon: "user-edit",
+      isShowHeader: true,
+      isShowFooter: false,
+    },
+    component: () =>
+      import(/* webpackChunkName: "edit-profile" */ "../views/EditProfile.vue"),
     beforeEnter: requireAuth,
   },
   // auth layer
@@ -124,7 +141,11 @@ const routes = [
     path: "/stats",
     name: "stats",
     meta: {
-      layout: "sub",
+      layout: "default",
+      name: "Theo dõi chỉ số cơ thể",
+      icon: "heartbeat",
+      isShowHeader: true,
+      isShowFooter: false,
     },
     component: () =>
       import(/* webpackChunkName: "stats" */ "../views/Stats.vue"),

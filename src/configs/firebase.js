@@ -4,13 +4,13 @@ import "firebase/compat/firestore";
 import "firebase/compat/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAg_n-NZEG8qYTl6i50zRbp7DBqlpISGiw",
-  authDomain: "imonney-24ccf.firebaseapp.com",
-  projectId: "imonney-24ccf",
-  storageBucket: "imonney-24ccf.appspot.com",
-  messagingSenderId: "443840538767",
-  appId: "1:443840538767:web:1e0be5a7ce9fbf50d7e8fa",
-  measurementId: "G-MQC751E2HV",
+  apiKey: "AIzaSyAlyzUq8AbyQg-yO65s8cceLbojlxYtEfE",
+  authDomain: "pei-v1.firebaseapp.com",
+  projectId: "pei-v1",
+  storageBucket: "pei-v1.appspot.com",
+  messagingSenderId: "969332427406",
+  appId: "1:969332427406:web:dbec202de73cf7845c17df",
+  measurementId: "G-BC2BLYT84V",
 };
 
 firebase.initializeApp(firebaseConfig);

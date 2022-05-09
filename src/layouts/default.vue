@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-lg mx-auto">
+  <div class="max-w-3xl mx-auto">
     <heading v-if="meta.isShowHeader" />
     <slot />
     <nav-bar v-if="meta.isShowFooter" />

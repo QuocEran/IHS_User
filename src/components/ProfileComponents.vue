@@ -1,7 +1,7 @@
 <template>
   <!--Info -->
   <div class="row" v-if="user">
-    <div class="container mx-auto">
+    <div class="mx-auto">
       <div class="text-center">
         <div class="w-24 h-24 rounded-full overflow-hidden mx-auto">
           <img
@@ -21,7 +21,7 @@
 
   <!-- Menu -->
   <div class="row mt-2">
-    <div class="container mx-auto px-8">
+    <div class="mx-auto px-8">
       <div class="grid grid-cols-1">
         <div class="col-span-1">
           <ul class="text-dark">

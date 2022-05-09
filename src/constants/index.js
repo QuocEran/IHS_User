@@ -7,12 +7,12 @@ export const NAV_ITEMS = [
     name: "Home",
   },
   {
-    icon: "calendar",
-    text: "Lịch hẹn",
+    icon: "file-medical",
+    text: "Bệnh án",
     name: "Appointments",
   },
   {
-    icon: "file-medical",
+    icon: "satellite-dish",
     text: "Thiết bị",
     name: "Device",
   },
@@ -27,32 +27,29 @@ export const PROFILE_OPTIONS = [
   {
     name: "Chỉnh sửa thông tin",
     icon: "user-edit",
-    route: {
-      name: "Home",
-      params: {},
-    },
+    route: "/edit-profile",
   },
+  // `{
+  //   name: "Công cụ",
+  //   icon: "tools",
+  //   route: {
+  //     name: "not-found",
+  //     params: {},
+  //   },
+  // },
+  // {
+  //   name: "Bảo mật",
+  //   icon: "lock",
+  //   route: {
+  //     name: "not-found",
+  //     params: {},
+  //   },
+  // },`
   {
-    name: "Công cụ",
-    icon: "tools",
-    route: {
-      name: "Home",
-      params: {},
-    },
-  },
-  {
-    name: "Quyền lợi",
-    icon: "lock",
-    route: {
-      name: "Home",
-      params: {},
-    },
-  },
-  {
-    name: "Về chúng tối",
+    name: "Giới thiệu",
     icon: "info-circle",
     route: {
-      name: "Home",
+      name: "not-found",
       params: {},
     },
   },

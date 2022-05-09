@@ -1,9 +1,9 @@
 <template>
   <footer
     id="footer"
-    class="fixed w-full max-w-lg bottom-0 bg-secondary items-center py-2"
+    class="fixed w-full xs:w-full max-w-3xl bottom-0 bg-secondary items-center p-2"
   >
-    <div class="container mx-auto px-6 h-full">
+    <div class="mx-auto sm:px-6 xs:p-0 h-full">
       <ul class="flex justify-between h-full items-center">
         <li
           v-for="navItem in navItems"
@@ -17,7 +17,9 @@
             class="text-xl hover:text-black flex flex-col items-center"
           >
             <fa :icon="navItem.icon" />
-            <p class="font-bold text-sm">{{ navItem.text }}</p>
+            <p class="xs:hidden sm:block font-bold text-sm">
+              {{ navItem.text }}
+            </p>
           </router-link>
         </li>
       </ul>

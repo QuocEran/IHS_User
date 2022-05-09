@@ -14,7 +14,7 @@
     <div v-else class="flex-grow flex items-center">
       <div class="flex items-center ml-3">
         <fa :icon="meta.icon" class="mr-4 text-2xl text-gray-500" />
-        <p class="font-bold text-xl border-b-2 border-gray-500 w-24">
+        <p class="font-bold text-xl border-b-2 border-gray-500 w-max">
           {{ meta.name }}
         </p>
       </div>
