@@ -1,6 +1,6 @@
 <template>
   <div class="mt-8">
-    <div class="container mx-auto px-8">
+    <div class="mx-auto px-8">
       <form
         class="flex flex-col justify-start space-y-6"
         @submit.prevent="onSubmit"
