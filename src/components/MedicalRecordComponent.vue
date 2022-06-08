@@ -2,52 +2,50 @@
   <div v-if="data" class="flex-col flex gap-4 p-2 mb-24">
     <div class="py-3 bg-white rounded-xl px-4">
       <div class="w-full font-semibold text-black text-left text-xl my-2">
-        THÔNG TIN CƠ BẢN
+        Profile
       </div>
       <table class="w-full">
         <tr>
-          <th class="font-semibold text-black w-1/3 text-left">
-            Mã bệnh nhân:
-          </th>
+          <th class="font-semibold text-black w-1/3 text-left">Patient Id:</th>
           <td class="text-gray-500 text-left break-all">
             {{ data.patientId }}
           </td>
         </tr>
         <tr>
-          <th class="font-semibold text-black w-1/3 text-left">Họ và tên:</th>
+          <th class="font-semibold text-black w-1/3 text-left">Full name:</th>
           <td class="text-gray-500 text-left">
             {{ data.name }}
           </td>
         </tr>
         <tr>
-          <th class="font-semibold text-black w-1/3 text-left">Tuổi:</th>
+          <th class="font-semibold text-black w-1/3 text-left">DOB:</th>
           <td class="text-gray-500 text-left">
             {{ data.age }}
           </td>
         </tr>
         <tr>
           <th class="font-semibold text-black w-1/3 text-left">
-            Số điện thoại:
+            Phone number:
           </th>
           <td class="text-gray-500 text-left">
             {{ data.phoneNumber }}
           </td>
         </tr>
         <tr>
-          <th class="font-semibold text-black w-1/3 text-left">Chẩn đoán:</th>
+          <th class="font-semibold text-black w-1/3 text-left">Diagnostic:</th>
           <td class="text-gray-500 text-left">
             {{ data.diagnostic }}
           </td>
         </tr>
         <tr>
-          <th class="font-semibold text-black w-1/3 text-left">Ghi chú:</th>
+          <th class="font-semibold text-black w-1/3 text-left">Note:</th>
           <td class="text-gray-500 text-left">
             {{ data.notes }}
           </td>
         </tr>
         <tr>
           <th class="font-semibold text-black w-1/3 text-left">
-            Ngày cập nhật:
+            Last updated:
           </th>
           <td class="text-gray-500 text-left">
             {{ timeConverter(data.createdDate / 1000) }}
@@ -57,21 +55,21 @@
     </div>
     <div class="py-3 bg-white rounded-xl px-4">
       <div class="w-full font-semibold text-black text-left text-xl my-2">
-        CHỈ SỐ SỨC KHỎE
+        Health stats
       </div>
       <table class="w-full">
         <tr>
-          <th class="font-semibold text-black w-1/3 text-left">Nhóm máu:</th>
+          <th class="font-semibold text-black w-1/3 text-left">Blood:</th>
           <td class="text-gray-500 text-left">
             {{ data.blood }}
           </td>
         </tr>
         <tr>
-          <th class="font-semibold text-black w-1/3 text-left">Chiều cao:</th>
+          <th class="font-semibold text-black w-1/3 text-left">Height:</th>
           <td class="text-gray-500 text-left">{{ data.height }} cm</td>
         </tr>
         <tr>
-          <th class="font-semibold text-black w-1/3 text-left">Cân nặng:</th>
+          <th class="font-semibold text-black w-1/3 text-left">Weight:</th>
           <td class="text-gray-500 text-left">{{ data.weight }} kg</td>
         </tr>
         <tr>
@@ -90,7 +88,7 @@
       class="h-44 w-44 mx-auto"
     />
     <p class="w-full text-center font-bold text-xl mt-4">
-      RẤT TIẾC, CHƯA CÓ DỮ LIỆU HIỂN THỊ
+      SORRY, NO DATA DISPLAYED
     </p>
   </div>
 </template>
@@ -100,6 +98,7 @@ import { useTimeConvert } from "@/utils/useTimeConvert";
 export default {
   setup() {
     const { timeConverter } = useTimeConvert();
+
     return {
       timeConverter,
     };

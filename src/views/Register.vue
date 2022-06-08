@@ -69,7 +69,7 @@
         </div>
         <div class="row flex justify-between items-center">
           <label for="age" class="flex flex-col w-1/2">
-            <span class="font-semibold">Age</span>
+            <span class="font-semibold">DOB</span>
             <input
               id="age"
               class="px-4 py-3 rounded-xl border border-gray-400 mt-1 bg-gray-200"

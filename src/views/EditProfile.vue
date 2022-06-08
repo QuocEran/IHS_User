@@ -4,7 +4,7 @@
       <router-link
         to="/profile"
         class="text-gray-600 text-lg font-semibold hover:text-gray-400"
-        ><fa icon="arrow-left" /> Back to profile</router-link
+        ><fa icon="arrow-left" /> Back</router-link
       >
     </div>
     <div class="mx-auto px-8">
@@ -26,7 +26,7 @@
         </div>
         <div class="row">
           <label for="age" class="flex flex-col w-full">
-            <span class="font-semibold">Age</span>
+            <span class="font-semibold">DOB</span>
             <input
               id="age"
               class="px-4 py-3 rounded-xl border border-gray-400 mt-1 bg-gray-200"
@@ -75,7 +75,7 @@
             type="submit"
             class="py-3 text-center w-full border rounded-xl border-gray-400 text-white font-bold bg-green"
           >
-            CẬP NHẬT
+            UPDATE
           </button>
           <button
             v-else

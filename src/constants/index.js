@@ -3,29 +3,29 @@ export const PUBLIC_LAYOUT = "default";
 export const NAV_ITEMS = [
   {
     icon: "home",
-    text: "Trang chủ",
+    text: "Home",
     name: "Home",
   },
   {
     icon: "file-medical",
-    text: "Bệnh án",
+    text: "Profile",
     name: "Appointments",
   },
   {
     icon: "satellite-dish",
-    text: "Thiết bị",
+    text: "Device",
     name: "Device",
   },
   {
     icon: "user",
-    text: "Cá nhân",
+    text: "User",
     name: "Profile",
   },
 ];
 
 export const PROFILE_OPTIONS = [
   {
-    name: "Chỉnh sửa thông tin",
+    name: "Edit profile",
     icon: "user-edit",
     route: "/edit-profile",
   },
@@ -46,7 +46,7 @@ export const PROFILE_OPTIONS = [
   //   },
   // },`
   {
-    name: "Giới thiệu",
+    name: "About us",
     icon: "info-circle",
     route: {
       name: "not-found",
@@ -54,7 +54,7 @@ export const PROFILE_OPTIONS = [
     },
   },
   {
-    name: "Đăng xuất",
+    name: "Log out",
     icon: "power-off",
     route: {
       name: "Logout",

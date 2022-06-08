@@ -35,7 +35,7 @@ const routes = [
       layout: "default",
       isShowHeader: true,
       isShowFooter: true,
-      name: "Bệnh án",
+      name: "Profile",
       icon: "file-medical",
     },
     component: () =>
@@ -54,7 +54,7 @@ const routes = [
       layout: "default",
       isShowHeader: true,
       isShowFooter: true,
-      name: "Thiết bị",
+      name: "Device",
       icon: "satellite-dish",
     },
     component: () =>
@@ -84,7 +84,7 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     meta: {
       layout: "default",
-      name: "Chỉnh sửa thông tin",
+      name: "Edit profile",
       icon: "user-edit",
       isShowHeader: true,
       isShowFooter: false,
@@ -142,7 +142,7 @@ const routes = [
     name: "stats",
     meta: {
       layout: "default",
-      name: "Theo dõi chỉ số cơ thể",
+      name: "Monitoring",
       icon: "heartbeat",
       isShowHeader: true,
       isShowFooter: false,

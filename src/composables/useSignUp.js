@@ -40,6 +40,9 @@ async function signup(
       .collection("patients")
       .doc(response.user.uid)
       .set({
+        patientId: response.user.uid,
+        espId: "",
+        notes: "",
         BMI: "",
         address: address,
         age: age,

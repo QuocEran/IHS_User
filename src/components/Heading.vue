@@ -7,7 +7,7 @@
         class="ml-3 h-14 w-14 object-fill rounded-full"
       />
       <div class="ml-3">
-        <p>Xin chào,</p>
+        <p>Hello,</p>
         <p class="font-bold text-xl">{{ user.displayName }}</p>
       </div>
     </div>

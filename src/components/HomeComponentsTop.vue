@@ -22,7 +22,7 @@
       </div>
       <div class="grid grid-cols-3 ml-3 gap-1">
         <div class="flex flex-col text-center">
-          <h4 class="text-gray-500 text-lg font-semibold">AGE</h4>
+          <h4 class="text-gray-500 text-lg font-semibold">DOB</h4>
           <h5 class="font-bold">{{ userInfo.age }}</h5>
         </div>
         <div class="flex flex-col text-center">

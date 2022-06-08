@@ -61,7 +61,7 @@ export default defineComponent({
       datasets: [
         {
           data: heartBeat.value,
-          label: "Nhịp tim",
+          label: "Heartbeat",
           borderColor: "#F24A72",
           fill: false,
         },
@@ -73,7 +73,7 @@ export default defineComponent({
         },
         {
           data: Temp.value,
-          label: "Thân nhiệt",
+          label: "Body Temperature",
           borderColor: "#3cba9f",
           fill: false,
         },
@@ -85,13 +85,13 @@ export default defineComponent({
       datasets: [
         {
           data: roomTemp.value,
-          label: "Nhiệt độ phòng",
+          label: "Room Temperature",
           borderColor: "#F24A72",
           fill: false,
         },
         {
           data: humid.value,
-          label: "Độ ẩm không khí",
+          label: "Humidity",
           borderColor: "#8e5ea2",
           fill: false,
         },
@@ -105,7 +105,7 @@ export default defineComponent({
         },
         title: {
           display: true,
-          text: "CHỈ SỐ THEO DÕI BỆNH NHÂN",
+          text: "HEALTH STATS",
           font: {
             weight: "bold",
             size: 20,
@@ -128,7 +128,7 @@ export default defineComponent({
         },
         title: {
           display: true,
-          text: "CHỈ SỐ THEO DÕI BỆNH NHÂN",
+          text: "HEALTH STATS",
           font: {
             weight: "bold",
             size: 20,
@@ -154,7 +154,7 @@ export default defineComponent({
         },
         title: {
           display: true,
-          text: "CHỈ SỐ MÔI TRƯỜNG PHÒNG BỆNH",
+          text: "ENVIRONMENT STATS",
           font: {
             weight: "bold",
             size: 20,
@@ -177,7 +177,7 @@ export default defineComponent({
         },
         title: {
           display: true,
-          text: "CHỈ SỐ MÔI TRƯỜNG PHÒNG BỆNH",
+          text: "ENVIRONMENT STATS",
           font: {
             weight: "bold",
             size: 20,
